@@ -1,0 +1,13 @@
+[Unit]
+Description=Transmission Complete Torrent Remover Manager Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 {path}/main.py
+WorkingDirectory={path}
+User={user}
+Group={server}
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
