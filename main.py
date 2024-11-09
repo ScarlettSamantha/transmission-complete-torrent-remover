@@ -45,7 +45,6 @@ class TransmissionManager:
                 path=str(self.config.get("path", "/transmission/rpc/")),              # Default to '' if not specified
                 timeout=5,
             )
-            print((self.client.session_stats().download_speed))
             print("Successfully connected to the server.")
         except Exception as e:
             print(f"Failed to connect to the server: {e}")
